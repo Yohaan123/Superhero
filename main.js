@@ -60,22 +60,22 @@ function my_keydown(e) {
 
     if (keyPressed == '38') {
         console.log("UP");
-        //up();
+      
     }
 
     if (keyPressed == '40') {
         console.log("DOWN");
-        //down();
+       
     }
 
     if (keyPressed == '39') {
         console.log("RIGHT");
-        //right();
+       
     }
 
     if (keyPressed == '37') {
         console.log("LEFT");
-        //left();
+       
     }
 
     if(keyPressed == '70'){
@@ -101,5 +101,44 @@ function my_keydown(e) {
     if(keyPressed == '72'){
         console.log("h");
         new_Image('captain_america_left_hand.png');
+    }
+}
+function up(){
+    if(player_y>=0){
+        player_y = player_y - block_img_height;
+        console.log("block_height"+block_img_height);
+        console.log("player_x =" +player_x + "player_y =" + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function down(){
+    if(player_y<=500){
+        player_y = player_y + block_img_height;
+        console.log("block_height" + block_img_height);
+        console.log("player_x =" + player_x + "player_y =" + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function left(){
+    if(player_x>=0){
+        player_x = player_x -block_img_width;
+        console.log("block_width" + block_img_width);
+        console.log("player_x =" + player_x + "player_y =" + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function right(){
+    if(player_x<=700){
+        player_x = player_x + block_img_width;
+        console.log("block_width" + block_img_width);
+        console.log("player_x =" + player_x + "player_y =" + player_y);
+        canvas.remove(player_object);
+        player_update();
     }
 }
