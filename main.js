@@ -6,6 +6,7 @@ var block_img_height = 30;
 var player_x = 10;
 var player_y = 10;
 var player_object = "";
+var block_image_object="";
 
 function player_update(){
     fabric.Image.fromURL("player.png",function(Img){
@@ -60,22 +61,22 @@ function my_keydown(e) {
 
     if (keyPressed == '38') {
         console.log("UP");
-      
+        up();
     }
 
     if (keyPressed == '40') {
         console.log("DOWN");
-       
+        down();
     }
 
     if (keyPressed == '39') {
         console.log("RIGHT");
-       
+       right();
     }
 
     if (keyPressed == '37') {
         console.log("LEFT");
-       
+       left();
     }
 
     if(keyPressed == '70'){
